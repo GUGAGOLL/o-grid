@@ -1,25 +1,67 @@
-body{
-    display: grid;
-    grid-template-areas: 
-     "cabeca cabeca cabeca"
-     "braco corpo corpo" 
-     "perna perna perna";
-    grid-template-rows: 50px auto 150px;
-    grid-template-columns: 200px auto auto;
+/* Cores do Palmeiras */
+:root {
+    --verde: #006437;
+    --branco: #ffffff;
+    --cinza: #f4f4f4;
 }
-header{
-    grid-area: cabeca;
-    background-color: rgb(0, 255, 42);
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cinza);
+    margin: 0;
+    text-align: center;
 }
-aside{
-    grid-area: braco;
-    background-color: red;
+
+header {
+    background-color: var(--verde);
+    color: var(--branco);
+    padding: 20px;
 }
-main{
-    grid-area: corpo;
-    background-color: green;
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    flex-wrap: wrap;
 }
-footer{
-    grid-area: perna;
-    background-color: black;
+
+.card {
+    background: white;
+    border: 2px solid var(--verde);
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+.preco {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-comprar {
+    display: block;
+    background-color: var(--verde);
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-comprar:hover {
+    background-color: #004d2a;
 }
